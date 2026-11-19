@@ -1,4 +1,8 @@
 package com.ute.studentmvvm.network
 
-class StudentApiService {
+import retrofit2.http.GET
+
+interface StudentApiService {
+    @GET("students")
+    suspend fun getStudents(): List<StudentDto>
 }
